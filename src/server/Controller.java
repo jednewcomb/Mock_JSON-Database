@@ -6,43 +6,47 @@ import java.util.Scanner;
 public class Controller {
 
     private final Database db;
-    private final Scanner scanner;
-    private String[] input;
+    //private final Scanner scan;
+    private final String[] input;
+    private String output;
     private int index;
 
-    public Controller(Database db, Scanner scanner) {
+    public Controller(Database db, String[] input) {
         this.db = db;
-        this.scanner = scanner;
+        this.input = input;
+    }
+
+    public String getOutput() {
+        return output;
     }
 
     public void run() {
-
-        do {
-            this.input = scanner.nextLine().split(" ", 3);
+        if (!input[0].equalsIgnoreCase("exit")) {
             getIndex();
             performOperation();
-        } while (!input[0].equalsIgnoreCase("exit"));
+        }
     }
 
     public void performOperation() {
         switch (this.input[0].toLowerCase()) {
-            case "set" :
-                System.out.println(db.set(index, input[2]) ? "OK" : "ERROR");
+            case "set":
+                this.output = (db.set(index, input[2]) ? "OK" : "ERROR");
                 break;
 
-            case "get" :
-                System.out.println(Objects.requireNonNullElse(this.db.get(this.index), "ERROR"));
+            case "get":
+                output = db.get(index);
                 break;
 
-            case "delete" :
-                System.out.println(db.delete(index) ? "OK" : "ERROR");
+            case "delete":
+                output = (db.delete(index) ? "OK" : "ERROR");
                 break;
 
-            case "exit" :
+            case "exit":
+                output = "OK";
                 break;
 
-            default :
-                System.out.println("ERROR");
+            default:
+                output = "ERROR";
                 break;
         }
     }
@@ -53,6 +57,7 @@ public class Controller {
         } catch (NumberFormatException | ArrayIndexOutOfBoundsException ignored) {
             index = -1;
         }
+
     }
 
 }
