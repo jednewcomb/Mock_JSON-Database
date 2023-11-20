@@ -2,10 +2,10 @@ package server;
 
 public interface Database {
 
-    boolean set(int index, String value);
+    boolean set(String keyInput, String valueInput);
 
-    String get(int index);
+    String get(String keyInput);
 
-    boolean delete(int index);
+    boolean delete(String keyInput);
 
 }

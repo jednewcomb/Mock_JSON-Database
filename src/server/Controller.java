@@ -1,63 +1,56 @@
 package server;
 
-import java.util.Objects;
-import java.util.Scanner;
-
+import com.google.gson.Gson;
 public class Controller {
 
     private final Database db;
-    //private final Scanner scan;
-    private final String[] input;
+    private final Entry entry;
     private String output;
-    private int index;
 
-    public Controller(Database db, String[] input) {
+    public Controller(Database db, Entry entry) {
         this.db = db;
-        this.input = input;
+        this.entry = entry;
     }
 
     public String getOutput() {
-        return output;
+        return this.output;
     }
 
     public void run() {
-        if (!input[0].equalsIgnoreCase("exit")) {
-            getIndex();
+        if (!this.entry.getType().equals("exit")) {
             performOperation();
         }
     }
 
     public void performOperation() {
-        switch (this.input[0].toLowerCase()) {
+        switch (this.entry.getType().toLowerCase()) {
             case "set":
-                this.output = (db.set(index, input[2]) ? "OK" : "ERROR");
+                this.db.set(this.entry.getKey(), this.entry.getValue());
+                this.output = new OperationResponse("OK").toJson();
                 break;
 
             case "get":
-                output = db.get(index);
+                String value = this.db.get(this.entry.getKey());
+                if (value != null) {
+                    this.output = new OperationResponse("OK", null, value).toJson();
+                } else {
+                    this.output = new OperationResponse("ERROR", "No such key").toJson();
+                }
                 break;
 
             case "delete":
-                output = (db.delete(index) ? "OK" : "ERROR");
+                boolean deleteResult = this.db.delete(this.entry.getKey());
+                if (deleteResult) {
+                    this.output = new OperationResponse("OK").toJson();
+                } else {
+                    this.output = new OperationResponse("ERROR", "No such key").toJson();
+                }
                 break;
 
             case "exit":
-                output = "OK";
-                break;
-
-            default:
-                output = "ERROR";
+                this.output = new OperationResponse("OK").toJson();
                 break;
         }
-    }
-
-    public void getIndex() {
-        try {
-            index = Integer.parseInt(input[1]) - 1;
-        } catch (NumberFormatException | ArrayIndexOutOfBoundsException ignored) {
-            index = -1;
-        }
-
     }
 
 }

@@ -1,43 +1,33 @@
 package server;
-
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ArrayDatabase implements Database {
 
-    private final String[] db;
-    private final int size;
+    private final Map<String, String> db;
 
-    public ArrayDatabase(int size) {
-        this.size = size;
-        this.db = new String[this.size];
-        Arrays.fill(this.db, "");
+    public ArrayDatabase() {
+        this.db = new HashMap<>();
     }
 
     @Override
-    public boolean set(int index, String value) {
-        if (inBounds(index)) {
-            db[index] = value;
-            return true;
-        }
-
+    public boolean set(String keyInput, String valueInput) {
+        db.put(keyInput, valueInput);
         return false;
     }
 
     @Override
-    public String get(int index) {
-        if (inBounds(index)) {
-            return db[index].isEmpty() ? "ERROR" : db[index];
-        }
-
-        return null;
+    public String get(String keyInput) {
+        return db.get(keyInput);
     }
+
 
     @Override
-    public boolean delete(int index) {
-        return set(index, "");
+    public boolean delete(String keyInput) {
+        return db.remove(keyInput) != null;
     }
 
-    private boolean inBounds(int num) {
-        return num >= 0 && num <= size - 1;
+    public String toString() {
+        return db.toString();
     }
 }
