@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-18T23:57:16" hostname="DESKTOP-MBQCLAC" time="2.983">
+  <properties/>
+  <testcase name="start" classname="JsonDatabaseTest" time="2.983"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Server started!
+Client started!
+Sent: {"type":"exit"}
+Receieved: {"type":"exit"}
+Received: {"response":"OK"}
+Sent: {"response":"OK"}
+?[1;31m
+Start test 2?[0m
+?[1;31m
+Start test 3?[0m
+Server started!
+Client started!
+Sent: {"type":"get","key":"name"}
+Receieved: {"type":"get","key":"name"}
+Received: {"response":"ERROR","reason":"No such key"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"set","key":"name","value":"Sorabh Tomar"}
+Receieved: {"type":"set","key":"name","value":"Sorabh Tomar"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"set","key":"name","value":"Sorabh"}
+Receieved: {"type":"set","key":"name","value":"Sorabh"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"name"}
+Receieved: {"type":"get","key":"name"}
+Sent: {"response":"OK","value":"Sorabh"}
+Received: {"response":"OK","value":"Sorabh"}
+Client started!
+Sent: {"type":"delete","key":"name"}
+Receieved: {"type":"delete","key":"name"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"delete","key":"name"}
+Receieved: {"type":"delete","key":"name"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"get","key":"name"}
+Receieved: {"type":"get","key":"name"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"set","key":"text","value":"Hyperskill is the best!"}
+Receieved: {"type":"set","key":"text","value":"Hyperskill is the best!"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"text"}
+Receieved: {"type":"get","key":"text"}
+Sent: {"response":"OK","value":"Hyperskill is the best!"}
+Received: {"response":"OK","value":"Hyperskill is the best!"}
+Client started!
+Sent: {"type":"get","key":"56"}
+Receieved: {"type":"get","key":"56"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"delete","key":"56"}
+Receieved: {"type":"delete","key":"56"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"delete","key":"100"}
+Receieved: {"type":"delete","key":"100"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"delete","key":"That key doesn\u0027t exist"}
+Receieved: {"type":"delete","key":"That key doesn\u0027t exist"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"set","key":"name","value":"Sorabh"}
+Receieved: {"type":"set","key":"name","value":"Sorabh"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"name"}
+Receieved: {"type":"get","key":"name"}
+Sent: {"response":"OK","value":"Sorabh"}
+Received: {"response":"OK","value":"Sorabh"}
+Client started!
+Sent: {"type":"delete","key":"name"}
+Receieved: {"type":"delete","key":"name"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"name"}
+Receieved: {"type":"get","key":"name"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"exit"}
+Receieved: {"type":"exit"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
