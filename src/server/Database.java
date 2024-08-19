@@ -1,5 +1,6 @@
 package server;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -58,3 +59,14 @@ public class Database {
         }
     }
 }
+=======
+public interface Database {
+
+    boolean set(String keyInput, String valueInput);
+
+    String get(String keyInput);
+
+    boolean delete(String keyInput);
+
+}
+>>>>>>> 99ff4272074130ea9fc2a4985e6c24aa1c38837e
