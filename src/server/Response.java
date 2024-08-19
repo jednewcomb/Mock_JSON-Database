@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 
 public class Response {
     private String response;
-
     private String value;
     private String reason;
 

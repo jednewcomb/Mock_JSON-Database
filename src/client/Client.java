@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Client {
-
+    
     public Client(String[] args) {
 
         Args arguments = new Args();

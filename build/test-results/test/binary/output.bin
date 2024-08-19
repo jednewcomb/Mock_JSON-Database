@@ -12,92 +12,35 @@
 Start test 3[0m
 Server started!
 Client started!
-#Sent: {"type":"get","key":"name"}
-(Receieved: {"type":"get","key":"name"}
+#Sent: {"type":"get","key":"text"}
+(Receieved: {"type":"get","key":"text"}
 7Received: {"response":"ERROR","reason":"No such key"}
 3Sent: {"response":"ERROR","reason":"No such key"}
 Client started!
-:Sent: {"type":"set","key":"name","value":"Sorabh Tomar"}
-?Receieved: {"type":"set","key":"name","value":"Sorabh Tomar"}
-Sent: {"response":"OK"}
-Received: {"response":"OK"}
-Client started!
-4Sent: {"type":"set","key":"name","value":"Sorabh"}
-9Receieved: {"type":"set","key":"name","value":"Sorabh"}
-Sent: {"response":"OK"}
-Received: {"response":"OK"}
-Client started!
-#Sent: {"type":"get","key":"name"}
-(Receieved: {"type":"get","key":"name"}
-*Sent: {"response":"OK","value":"Sorabh"}
-.Received: {"response":"OK","value":"Sorabh"}
-Client started!
-&Sent: {"type":"delete","key":"name"}
-+Receieved: {"type":"delete","key":"name"}
-Sent: {"response":"OK"}
-Received: {"response":"OK"}
-Client started!
-&Sent: {"type":"delete","key":"name"}
-+Receieved: {"type":"delete","key":"name"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-#Sent: {"type":"get","key":"name"}
-(Receieved: {"type":"get","key":"name"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-ESent: {"type":"set","key":"text","value":"Hyperskill is the best!"}
-JReceieved: {"type":"set","key":"text","value":"Hyperskill is the best!"}
+:Sent: {"type":"set","key":"text","value":"Hello World!"}
+?Receieved: {"type":"set","key":"text","value":"Hello World!"}
 Sent: {"response":"OK"}
 Received: {"response":"OK"}
 Client started!
 #Sent: {"type":"get","key":"text"}
 (Receieved: {"type":"get","key":"text"}
-;Sent: {"response":"OK","value":"Hyperskill is the best!"}
-?Received: {"response":"OK","value":"Hyperskill is the best!"}
+0Sent: {"response":"OK","value":"Hello World!"}
+4Received: {"response":"OK","value":"Hello World!"}
 Client started!
-!Sent: {"type":"get","key":"56"}
-&Receieved: {"type":"get","key":"56"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-$Sent: {"type":"delete","key":"56"}
-)Receieved: {"type":"delete","key":"56"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-%Sent: {"type":"delete","key":"100"}
-*Receieved: {"type":"delete","key":"100"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-=Sent: {"type":"delete","key":"That key doesn\u0027t exist"}
-BReceieved: {"type":"delete","key":"That key doesn\u0027t exist"}
-3Sent: {"response":"ERROR","reason":"No such key"}
-7Received: {"response":"ERROR","reason":"No such key"}
-Client started!
-4Sent: {"type":"set","key":"name","value":"Sorabh"}
-9Receieved: {"type":"set","key":"name","value":"Sorabh"}
+&Sent: {"type":"delete","key":"text"}
++Receieved: {"type":"delete","key":"text"}
 Sent: {"response":"OK"}
 Received: {"response":"OK"}
 Client started!
-#Sent: {"type":"get","key":"name"}
-(Receieved: {"type":"get","key":"name"}
-*Sent: {"response":"OK","value":"Sorabh"}
-.Received: {"response":"OK","value":"Sorabh"}
-Client started!
-&Sent: {"type":"delete","key":"name"}
-+Receieved: {"type":"delete","key":"name"}
-Sent: {"response":"OK"}
-Received: {"response":"OK"}
-Client started!
-#Sent: {"type":"get","key":"name"}
-(Receieved: {"type":"get","key":"name"}
+&Sent: {"type":"delete","key":"text"}
++Receieved: {"type":"delete","key":"text"}
 3Sent: {"response":"ERROR","reason":"No such key"}
 7Received: {"response":"ERROR","reason":"No such key"}
 Client started!
-Sent: {"type":"exit"}
-Receieved: {"type":"exit"}
-Sent: {"response":"OK"}
-Received: {"response":"OK"}
+#Sent: {"type":"get","key":"text"}
+(Receieved: {"type":"get","key":"text"}
+3Sent: {"response":"ERROR","reason":"No such key"}
+7Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+žSent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+£Receieved: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
