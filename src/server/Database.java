@@ -15,6 +15,7 @@ public class Database {
     private ReadWriteLock lock = new ReentrantReadWriteLock();
     private Lock readLock = lock.readLock();
     private Lock writeLock = lock.writeLock();
+    
     public Database() {
         this.db = new HashMap<>();
     }
