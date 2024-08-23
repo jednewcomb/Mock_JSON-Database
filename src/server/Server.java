@@ -9,6 +9,13 @@ import java.net.Socket;
 
 public class Server {
 
+    /**
+     * Server constructor, which attempts to read a String from client
+     * and transforms it into an "Entry", which is that same String in
+     * JSON format using our GSON object. It then sends the info to a
+     * ClientHandler class for multithreading purposes. If the String
+     * scanned is "exit", the Server is closed.
+     */
     public Server() {
 
         String address = "127.0.0.1";
@@ -44,11 +51,15 @@ public class Server {
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Issue with Server Socket " + e.getMessage());
         }
 
     }
 
+    /**
+     *
+     * @param args - Program arguments.
+     */
     public static void main(String[] args) {
         Server server1 = new Server();
     }
