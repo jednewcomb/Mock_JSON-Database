@@ -36,7 +36,7 @@ public class Response {
     }
 
     /**
-     * 
+     *
      * @return - The JSON representation of Response
      */
     public String toJson() {
