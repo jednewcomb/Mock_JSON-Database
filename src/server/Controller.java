@@ -6,8 +6,7 @@ import server.Commands.GetCommand;
 import server.Commands.SetCommand;
 
 public class Controller {
-
-    private Database db;
+    private final Database db;
     private Command command;
     private Entry entry;
 

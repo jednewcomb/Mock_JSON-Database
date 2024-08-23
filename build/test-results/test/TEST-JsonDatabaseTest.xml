@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-08-19T01:50:50" hostname="DESKTOP-MBQCLAC" time="16.637">
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-08-23T00:11:36" hostname="DESKTOP-MBQCLAC" time="16.702">
   <properties/>
-  <testcase name="start" classname="JsonDatabaseTest" time="16.637">
-    <failure message="java.lang.AssertionError: Exception in test #3&#10;&#10;com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected a string but was BEGIN_OBJECT at line 1 column 39 path $.value&#10;&#9;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:963)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:928)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:877)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:848)&#10;&#9;at server.Server.&lt;init&gt;(Server.java:32)&#10;&#9;at server.Server.main(Server.java:53)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -t set -k text -v &quot;Hello World!&quot;&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -t delete -k text&#10;Arguments for Client: -t delete -k text&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -in setFile.json&#10;&#10;Server started!&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}&#10;Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}" type="java.lang.AssertionError">java.lang.AssertionError: Exception in test #3
+  <testcase name="start" classname="JsonDatabaseTest" time="16.702">
+    <failure message="java.lang.AssertionError: Exception in test #3&#10;&#10;com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected a string but was BEGIN_OBJECT at line 1 column 39 path $.value&#10;&#9;at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:963)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:928)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:877)&#10;&#9;at com.google.gson.Gson.fromJson(Gson.java:848)&#10;&#9;at server.Server.&lt;init&gt;(Server.java:32)&#10;&#9;at server.Server.main(Server.java:53)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -t set -k text -v &quot;Hello World!&quot;&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -t delete -k text&#10;Arguments for Client: -t delete -k text&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -in setFile.json&#10;&#10;stdout:&#10;Server started!&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;,&quot;vaClient started!&#10;Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;OK&quot;}&#10;Received: {&quot;response&quot;:&quot;OK&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reaClient started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}&#10;Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}&#10;&#10;stderr:&#10;Exception in thread &quot;Thread-6&quot; java.util.ConcurrentModificationException&#10;&#9;at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)&#10;&#9;at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)&#10;&#9;at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandlException in thread &quot;Thread-8&quot; java.util.ConcurrentModificationException&#10;&#9;at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)&#10;&#9;at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)&#10;&#9;at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandler(OutputMock.java:136)&#10;&#9;at org.hyperskill.hstest.dynamic.output.OutputMock.write(OutputMock." type="java.lang.AssertionError">java.lang.AssertionError: Exception in test #3
 
 com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected a string but was BEGIN_OBJECT at line 1 column 39 path $.value
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
@@ -25,6 +25,7 @@ Arguments for Client: -t delete -k text
 Arguments for Client: -t get -k text
 Arguments for Client: -in setFile.json
 
+stdout:
 Server started!
 Client started!
 Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
@@ -34,14 +35,13 @@ Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such k
 Client started!
 Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
 Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;}
 Received: {&quot;response&quot;:&quot;OK&quot;}
+Sent: {&quot;response&quot;:&quot;OK&quot;}
 Client started!
 Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
 Received: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Client started!
+Sent: {&quot;response&quot;:&quot;OK&quot;,&quot;vaClient started!
 Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
 Sent: {&quot;response&quot;:&quot;OK&quot;}
@@ -49,9 +49,8 @@ Received: {&quot;response&quot;:&quot;OK&quot;}
 Client started!
 Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
 Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
+Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reaClient started!
 Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
@@ -59,6 +58,16 @@ Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No su
 Client started!
 Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
 Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
+
+stderr:
+Exception in thread &quot;Thread-6&quot; java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
+	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
+	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandlException in thread &quot;Thread-8&quot; java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
+	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
+	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandler(OutputMock.java:136)
+	at org.hyperskill.hstest.dynamic.output.OutputMock.write(OutputMock.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -129,12 +138,11 @@ Sent: {"response":"ERROR","reason":"No such key"}
 Client started!
 Sent: {"type":"set","key":"text","value":"Hello World!"}
 Receieved: {"type":"set","key":"text","value":"Hello World!"}
-Sent: {"response":"OK"}
 Received: {"response":"OK"}
+Sent: {"response":"OK"}
 Client started!
 Sent: {"type":"get","key":"text"}
 Receieved: {"type":"get","key":"text"}
-Sent: {"response":"OK","value":"Hello World!"}
 Received: {"response":"OK","value":"Hello World!"}
 Client started!
 Sent: {"type":"delete","key":"text"}
@@ -144,7 +152,6 @@ Received: {"response":"OK"}
 Client started!
 Sent: {"type":"delete","key":"text"}
 Receieved: {"type":"delete","key":"text"}
-Sent: {"response":"ERROR","reason":"No such key"}
 Received: {"response":"ERROR","reason":"No such key"}
 Client started!
 Sent: {"type":"get","key":"text"}
@@ -155,5 +162,12 @@ Client started!
 Sent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
 Receieved: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Exception in thread "Thread-6" java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
+	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
+Exception in thread "Thread-8" java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
+	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
+	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandler(OutputMock.java:136)
+]]></system-err>
 </testsuite>

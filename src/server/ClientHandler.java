@@ -7,13 +7,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ClientHandler implements Runnable {
-
-    private ServerSocket server;
-    private Socket socket;
-    private DataInputStream input;
-    private DataOutputStream output;
-    private Entry entry;
-    private Database db;
+    private final ServerSocket server;
+    private final Socket socket;
+    private final DataInputStream input;
+    private final DataOutputStream output;
+    private final Entry entry;
+    private final Database db;
 
     public ClientHandler(ServerSocket server, Socket socket, DataInputStream dis, DataOutputStream dos, Entry entry, Database db) {
         this.server = server;
@@ -30,11 +29,9 @@ public class ClientHandler implements Runnable {
         try {
             Controller controller = new Controller(db, entry);
             controller.run();
-            String toClient = controller.getResponse().toJson();
-            output.writeUTF(toClient);
-            System.out.println("Sent: " + toClient);
+            output.writeUTF(controller.getResponse().toJson());
+            System.out.println("Sent: " + controller.getResponse().toJson());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
             e.printStackTrace();
         }
 

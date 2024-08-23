@@ -10,12 +10,11 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Database {
-
     private final Map<String, String> db;
-    private ReadWriteLock lock = new ReentrantReadWriteLock();
-    private Lock readLock = lock.readLock();
-    private Lock writeLock = lock.writeLock();
-    
+    private final ReadWriteLock lock = new ReentrantReadWriteLock();
+    private final Lock readLock = lock.readLock();
+    private final Lock writeLock = lock.writeLock();
+
     public Database() {
         this.db = new HashMap<>();
     }

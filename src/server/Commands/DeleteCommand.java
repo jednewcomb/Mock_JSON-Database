@@ -4,8 +4,8 @@ import server.Database;
 import server.Response;
 
 public class DeleteCommand implements Command {
-    private Database db;
-    private String keyValue;
+    private final Database db;
+    private final String keyValue;
     private Response response;
 
     public DeleteCommand(Database db, String keyValue) {

@@ -4,10 +4,9 @@ import server.Database;
 import server.Response;
 
 public class SetCommand implements Command {
-
-    private Database db;
-    private String key;
-    private String data;
+    private final Database db;
+    private final String key;
+    private final String data;
     private Response response;
 
     public SetCommand(Database db, String data, String key) {

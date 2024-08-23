@@ -3,7 +3,6 @@ package client;
 import com.beust.jcommander.Parameter;
 
 public class Args {
-
     @Parameter(names = {"-t"})
     private String type;
     @Parameter(names = {"-k"})
