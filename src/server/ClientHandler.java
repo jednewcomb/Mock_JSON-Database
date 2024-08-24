@@ -1,5 +1,8 @@
 package server;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -25,12 +28,11 @@ public class ClientHandler implements Runnable {
 
     @Override
     public void run() {
-
         try {
             Controller controller = new Controller(db, entry);
             controller.run();
-            output.writeUTF(controller.getResponse().toJson());
-            System.out.println("Sent: " + controller.getResponse().toJson());
+            output.writeUTF(controller.getResponse());
+            System.out.println("Sent: " + controller.getResponse());
         } catch (IOException e) {
             e.printStackTrace();
         }

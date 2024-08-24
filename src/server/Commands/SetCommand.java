@@ -1,15 +1,16 @@
 package server.Commands;
 
+import com.google.gson.JsonElement;
 import server.Database;
 import server.Response;
 
 public class SetCommand implements Command {
     private final Database db;
-    private final String key;
-    private final String data;
+    private final JsonElement key;
+    private final JsonElement data;
     private Response response;
 
-    public SetCommand(Database db, String data, String key) {
+    public SetCommand(Database db, JsonElement data, JsonElement key) {
         this.db = db;
         this.data = data;
         this.key = key;
@@ -18,9 +19,9 @@ public class SetCommand implements Command {
     @Override
     public void execute() {
 
-        if (db.set(this.key, this.data)) {
-            this.response = new Response("OK");
-        }
+
+        db.set(this.key, this.data);
+        this.response = new Response("OK");
 
     }
 

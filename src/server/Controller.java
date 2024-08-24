@@ -1,5 +1,7 @@
 package server;
 
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import server.Commands.Command;
 import server.Commands.DeleteCommand;
 import server.Commands.GetCommand;
@@ -9,7 +11,6 @@ public class Controller {
     private final Database db;
     private Command command;
     private Entry entry;
-
     private Response response;
 
     public Controller(Database db, Entry entry) {
@@ -25,15 +26,15 @@ public class Controller {
         this.command.execute();
     }
 
-    public Response getResponse() {
-        return this.response;
+    public String getResponse() {
+        return new GsonBuilder().create().toJson(this.response);
     }
 
     void run() {
 
         String operation = this.entry.getType();
-        String key = this.entry.getKey();
-        String request = this.entry.getValue();
+        JsonElement key = this.entry.getKey();
+        JsonElement request = this.entry.getValue();
 
         switch (operation) {
             case "set":

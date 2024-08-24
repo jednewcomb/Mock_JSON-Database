@@ -1,15 +1,16 @@
 package server.Commands;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import server.Database;
 import server.Response;
 
 public class GetCommand implements Command {
     private final Database db;
-    private final String keyValue;
+    private final JsonElement keyValue;
     private Response response;
 
-    public GetCommand(Database db, String keyValue) {
+    public GetCommand(Database db, JsonElement keyValue) {
         this.db = db;
         this.keyValue = keyValue;
     }

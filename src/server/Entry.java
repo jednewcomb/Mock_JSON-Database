@@ -1,24 +1,25 @@
 package server;
 
+import com.google.gson.JsonElement;
+import com.google.gson.annotations.Expose;
+
 public class Entry {
-    private String type;
-    private String key;
-    private String value;
-    private String fileName;
+    @Expose private String type;
+    @Expose private JsonElement key;
+    @Expose private JsonElement value;
 
     public Entry(){};
-    public Entry(String type, String value) {
+    public Entry(String type, JsonElement value) {
         this.type = type;
         this.value = value;
     }
     
-    public Entry(String type, String value, String fileName) {
-        
+    public Entry(String type, JsonElement value, String fileName) {
         this.type = type;
         this.value = value;
-        this.fileName = fileName;
     }
-    public void setKey(String key) {
+
+    public void setKey(JsonElement key) {
         this.key = key;
     }
 
@@ -26,15 +27,15 @@ public class Entry {
         this.type = type;
     }
 
-    public void setValue(String value) {
+    public void setValue(JsonElement value) {
         this.value = value;
     }
 
-    public String getKey() {
+    public JsonElement getKey() {
         return key;
     }
 
-    public String getValue() {
+    public JsonElement getValue() {
         return value;
     }
 
@@ -42,13 +43,5 @@ public class Entry {
         return type;
     }
 
-    public String getFileName() {
-        return this.fileName;
-    }
 
-    public String toString() {
-        return this.type + " " + this.key + " " + this.value + " " + this.fileName;
-    }
-
-    
 }

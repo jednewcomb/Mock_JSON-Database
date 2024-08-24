@@ -1,11 +1,12 @@
 package server;
 
-import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.annotations.Expose;
 
 public class Response {
-    private String response;
-    private String value;
-    private String reason;
+    @Expose private String response;
+    @Expose private JsonElement value;
+    @Expose private String reason;
 
     public Response(String response) {
         this.response = response;
@@ -17,7 +18,7 @@ public class Response {
      * @param value - The associated value with "OK" or the reason for
      *                error if "ERROR"
      */
-    public Response(String response, String value) {
+    public Response(String response, JsonElement value) {
         this.response = response;
         this.value = value;
     }
@@ -29,19 +30,9 @@ public class Response {
      *      *         error if "ERROR"
      * @param reason -
      */
-    public Response(String response, String value, String reason) {
+    public Response(String response, JsonElement value, String reason) {
         this.response = response;
         this.value = value;
         this.reason = reason;
     }
-
-    /**
-     *
-     * @return - The JSON representation of Response
-     */
-    public String toJson() {
-        Gson gson = new Gson();
-        return gson.toJson(this);
-    }
-
 }

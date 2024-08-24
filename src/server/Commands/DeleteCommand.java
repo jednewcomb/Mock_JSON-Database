@@ -1,14 +1,15 @@
 package server.Commands;
 
+import com.google.gson.JsonElement;
 import server.Database;
 import server.Response;
 
 public class DeleteCommand implements Command {
     private final Database db;
-    private final String keyValue;
+    private final JsonElement keyValue;
     private Response response;
 
-    public DeleteCommand(Database db, String keyValue) {
+    public DeleteCommand(Database db, JsonElement keyValue) {
         this.db = db;
         this.keyValue = keyValue;
     }
