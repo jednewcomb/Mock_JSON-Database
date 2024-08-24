@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">16.702s</div>
+<div class="counter">1.783s</div>
 <p>duration</p>
 </div>
 </td>
@@ -69,9 +69,6 @@
 <li>
 <a href="#tab2">Standard output</a>
 </li>
-<li>
-<a href="#tab3">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
@@ -81,14 +78,20 @@
 <span class="code">
 <pre>java.lang.AssertionError: Exception in test #3
 
-com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected a string but was BEGIN_OBJECT at line 1 column 39 path $.value
-	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:226)
-	at com.google.gson.Gson.fromJson(Gson.java:963)
-	at com.google.gson.Gson.fromJson(Gson.java:928)
-	at com.google.gson.Gson.fromJson(Gson.java:877)
-	at com.google.gson.Gson.fromJson(Gson.java:848)
-	at server.Server.&lt;init&gt;(Server.java:32)
-	at server.Server.main(Server.java:53)
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 8 path $
+	at com.google.gson.JsonParser.parseReader(JsonParser.java:66)
+	at com.google.gson.JsonParser.parseString(JsonParser.java:47)
+	at client.JsonElementConverter.convert(JsonElementConverter.java:10)
+	at client.JsonElementConverter.convert(JsonElementConverter.java:7)
+	at com.beust.jcommander.JCommander.convertValue(JCommander.java:1333)
+	at com.beust.jcommander.ParameterDescription.addValue(ParameterDescription.java:249)
+	at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:913)
+	at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:894)
+	at com.beust.jcommander.JCommander.parseValues(JCommander.java:724)
+	at com.beust.jcommander.JCommander.parse(JCommander.java:356)
+	at com.beust.jcommander.JCommander.parse(JCommander.java:335)
+	at client.Client.&lt;init&gt;(Client.java:20)
+	at client.Client.main(Client.java:59)
 
 Please find below the output of your program during this failed test.
 
@@ -96,55 +99,13 @@ Please find below the output of your program during this failed test.
 
 Arguments for Client: -t get -k text
 Arguments for Client: -t set -k text -v &quot;Hello World!&quot;
-Arguments for Client: -t get -k text
-Arguments for Client: -t delete -k text
-Arguments for Client: -t delete -k text
-Arguments for Client: -t get -k text
-Arguments for Client: -in setFile.json
 
-stdout:
 Server started!
 Client started!
 Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
 Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;,&quot;vaClient started!
-Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reaClient started!
-Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
-Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
-
-stderr:
-Exception in thread &quot;Thread-6&quot; java.util.ConcurrentModificationException
-	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
-	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
-	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandlException in thread &quot;Thread-8&quot; java.util.ConcurrentModificationException
-	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
-	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
-	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandler(OutputMock.java:136)
-	at org.hyperskill.hstest.dynamic.output.OutputMock.write(OutputMock.
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -208,7 +169,7 @@ Exception in thread &quot;Thread-6&quot; java.util.ConcurrentModificationExcepti
 </thead>
 <tr>
 <td class="failures">start</td>
-<td class="failures">16.702s</td>
+<td class="failures">1.783s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -234,45 +195,6 @@ Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
 Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
 Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;text&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;,&quot;value&quot;:&quot;Hello World!&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;OK&quot;}
-Received: {&quot;response&quot;:&quot;OK&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;delete&quot;,&quot;key&quot;:&quot;text&quot;}
-Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Client started!
-Sent: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
-Receieved: {&quot;type&quot;:&quot;set&quot;,&quot;key&quot;:&quot;person&quot;,&quot;value&quot;:{&quot;name&quot;:&quot;Elon Musk&quot;,&quot;car&quot;:{&quot;model&quot;:&quot;Tesla Roadster&quot;,&quot;year&quot;:&quot;2018&quot;},&quot;rocket&quot;:{&quot;name&quot;:&quot;Falcon 9&quot;,&quot;launches&quot;:&quot;87&quot;}}}
-</pre>
-</span>
-</div>
-<div id="tab3" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Exception in thread &quot;Thread-6&quot; java.util.ConcurrentModificationException
-	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
-	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
-Exception in thread &quot;Thread-8&quot; java.util.ConcurrentModificationException
-	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
-	at java.base/java.util.HashMap$ValueIterator.next(HashMap.java:1625)
-	at org.hyperskill.hstest.dynamic.output.OutputMock.getPartialHandler(OutputMock.java:136)
 </pre>
 </span>
 </div>
@@ -284,7 +206,7 @@ Exception in thread &quot;Thread-8&quot; java.util.ConcurrentModificationExcepti
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 22, 2024, 8:11:53 PM</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Aug 24, 2024, 12:19:36 PM</p>
 </div>
 </div>
 </body>

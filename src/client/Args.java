@@ -1,14 +1,15 @@
 package client;
 
 import com.beust.jcommander.Parameter;
+import com.google.gson.JsonElement;
 
 public class Args {
     @Parameter(names = {"-t"})
     private String type;
-    @Parameter(names = {"-k"})
-    private String key;
-    @Parameter(names = {"-v"})
-    private String value;
+    @Parameter(names = {"-k"}, converter = JsonElementConverter.class)
+    private JsonElement key;
+    @Parameter(names = {"-v"}, converter = JsonElementConverter.class)
+    private JsonElement value;
     @Parameter(names = {"-in"})
     private String fileName;
 
@@ -16,17 +17,18 @@ public class Args {
         return type;
     }
 
-    public String getKey() {
+    public JsonElement getKey() {
         return key;
     }
 
-    public String getValue() {
+    public JsonElement getValue() {
         return value;
     }
 
     public String getFileName() {
         return fileName;
     }
+
 
     public String toString() {
         return this.type + " " + this.key + " " + this.value + " " + this.fileName;

@@ -44,6 +44,4 @@ public class Response {
         return gson.toJson(this);
     }
 
-
-
 }
