@@ -5,7 +5,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import server.Exceptions.NoSuchKeyException;
 
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -65,7 +64,8 @@ public class Database {
                 db.remove(keyInput.getAsString());
                 updateFile(db.toString());
                 return true;
-            } else if (keyInput.isJsonArray()) {
+            }
+            else if (keyInput.isJsonArray()) {
                 JsonArray keys = keyInput.getAsJsonArray();
                 String toRemove = keys.remove(keys.size() - 1).getAsString();
                 findElement(keys, false).getAsJsonObject().remove(toRemove);
@@ -88,7 +88,8 @@ public class Database {
                 }
                 tmp = tmp.getAsJsonObject().get(key.getAsString());
             }
-        } else {
+        }
+        else {
             for (JsonElement key : keys) {
                 if (!key.isJsonPrimitive() || !tmp.getAsJsonObject().has(key.getAsString())) {
                     throw new NoSuchKeyException();

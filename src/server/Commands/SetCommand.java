@@ -18,11 +18,8 @@ public class SetCommand implements Command {
 
     @Override
     public void execute() {
-
-
         db.set(this.key, this.data);
         this.response = new Response("OK");
-
     }
 
     public Response getResponse() {

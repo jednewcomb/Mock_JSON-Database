@@ -1,7 +1,6 @@
 package server.Commands;
 
 import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import server.Database;
 import server.Response;
 
@@ -20,7 +19,8 @@ public class GetCommand implements Command {
 
         if (this.db.get(keyValue) != null) {
             this.response = new Response("OK", this.db.get(keyValue));
-        } else {
+        }
+        else {
             this.response = new Response("ERROR", null, "No such key");
         }
 
@@ -29,4 +29,5 @@ public class GetCommand implements Command {
     public Response getResponse() {
         return this.response;
     }
+
 }

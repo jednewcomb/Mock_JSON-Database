@@ -16,13 +16,12 @@ public class DeleteCommand implements Command {
 
     @Override
     public void execute() {
-
         if (this.db.delete(this.keyValue)) {
             this.response = new Response("OK");
-        } else {
+        }
+        else {
             this.response = new Response("ERROR", null, "No such key");
         }
-
     }
 
     public Response getResponse() {
