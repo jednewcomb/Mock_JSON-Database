@@ -4,19 +4,21 @@ import com.google.gson.JsonElement;
 import com.google.gson.annotations.Expose;
 
 public class Response {
-    @Expose private String response;
-    @Expose private JsonElement value;
-    @Expose private String reason;
+    @Expose
+    private String response;
+    @Expose
+    private String reason;
+    @Expose
+    private JsonElement value;
 
     public Response(String response) {
         this.response = response;
     }
 
     /**
-     *
      * @param response - Either "OK" or "ERROR", could possibly be enum?
-     * @param value - The associated value with "OK" or the reason for
-     *                error if "ERROR"
+     * @param value    - The associated value with "OK" or the reason for
+     *                 error if "ERROR"
      */
     public Response(String response, JsonElement value) {
         this.response = response;
@@ -24,11 +26,10 @@ public class Response {
     }
 
     /**
-     *
      * @param response - Either "OK" or "ERROR", could possibly be enum?
-     * @param value - The associated value with "OK" or the reason for
-     *      *         error if "ERROR"
-     * @param reason -
+     * @param value    - The associated value with "OK" or the reason for
+     *                 *         error if "ERROR"
+     * @param reason   -
      */
     public Response(String response, JsonElement value, String reason) {
         this.response = response;

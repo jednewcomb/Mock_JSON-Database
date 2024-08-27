@@ -2,14 +2,20 @@ package client;
 
 import com.beust.jcommander.Parameter;
 import com.google.gson.JsonElement;
+import com.google.gson.annotations.Expose;
 
 public class Args {
+
+    @Expose
     @Parameter(names = {"-t"})
     private String type;
-    @Parameter(names = {"-k"}, converter = JsonElementConverter.class)
-    private JsonElement key;
-    @Parameter(names = {"-v"}, converter = JsonElementConverter.class)
-    private JsonElement value;
+    @Expose
+    @Parameter(names = {"-k"})
+    private String key;
+    @Expose
+    @Parameter(names = {"-v"})
+    private String value;
+    @Expose
     @Parameter(names = {"-in"})
     private String fileName;
 
@@ -17,11 +23,11 @@ public class Args {
         return type;
     }
 
-    public JsonElement getKey() {
+    public String getKey() {
         return key;
     }
 
-    public JsonElement getValue() {
+    public String getValue() {
         return value;
     }
 
@@ -29,8 +35,4 @@ public class Args {
         return fileName;
     }
 
-
-    public String toString() {
-        return this.type + " " + this.key + " " + this.value + " " + this.fileName;
-    }
 }

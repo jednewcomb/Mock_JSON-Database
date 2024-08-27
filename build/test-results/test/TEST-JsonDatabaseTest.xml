@@ -1,86 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-08-26T12:57:58" hostname="DESKTOP-MBQCLAC" time="1.783">
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-27T20:29:54" hostname="DESKTOP-MBQCLAC" time="3.161">
   <properties/>
-  <testcase name="start" classname="JsonDatabaseTest" time="1.783">
-    <failure message="java.lang.AssertionError: Exception in test #3&#10;&#10;com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 8 path $&#10;&#9;at com.google.gson.JsonParser.parseReader(JsonParser.java:66)&#10;&#9;at com.google.gson.JsonParser.parseString(JsonParser.java:47)&#10;&#9;at client.JsonElementConverter.convert(JsonElementConverter.java:10)&#10;&#9;at client.JsonElementConverter.convert(JsonElementConverter.java:7)&#10;&#9;at com.beust.jcommander.JCommander.convertValue(JCommander.java:1333)&#10;&#9;at com.beust.jcommander.ParameterDescription.addValue(ParameterDescription.java:249)&#10;&#9;at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:913)&#10;&#9;at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:894)&#10;&#9;at com.beust.jcommander.JCommander.parseValues(JCommander.java:724)&#10;&#9;at com.beust.jcommander.JCommander.parse(JCommander.java:356)&#10;&#9;at com.beust.jcommander.JCommander.parse(JCommander.java:335)&#10;&#9;at client.Client.&lt;init&gt;(Client.java:20)&#10;&#9;at client.Client.main(Client.java:59)&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Arguments for Client: -t get -k text&#10;Arguments for Client: -t set -k text -v &quot;Hello World!&quot;&#10;&#10;Server started!&#10;Client started!&#10;Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}&#10;Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}&#10;Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}" type="java.lang.AssertionError">java.lang.AssertionError: Exception in test #3
-
-com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 8 path $
-	at com.google.gson.JsonParser.parseReader(JsonParser.java:66)
-	at com.google.gson.JsonParser.parseString(JsonParser.java:47)
-	at client.JsonElementConverter.convert(JsonElementConverter.java:10)
-	at client.JsonElementConverter.convert(JsonElementConverter.java:7)
-	at com.beust.jcommander.JCommander.convertValue(JCommander.java:1333)
-	at com.beust.jcommander.ParameterDescription.addValue(ParameterDescription.java:249)
-	at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:913)
-	at com.beust.jcommander.JCommander.processFixedArity(JCommander.java:894)
-	at com.beust.jcommander.JCommander.parseValues(JCommander.java:724)
-	at com.beust.jcommander.JCommander.parse(JCommander.java:356)
-	at com.beust.jcommander.JCommander.parse(JCommander.java:335)
-	at client.Client.&lt;init&gt;(Client.java:20)
-	at client.Client.main(Client.java:59)
-
-Please find below the output of your program during this failed test.
-
----
-
-Arguments for Client: -t get -k text
-Arguments for Client: -t set -k text -v &quot;Hello World!&quot;
-
-Server started!
-Client started!
-Sent: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Receieved: {&quot;type&quot;:&quot;get&quot;,&quot;key&quot;:&quot;text&quot;}
-Received: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-Sent: {&quot;response&quot;:&quot;ERROR&quot;,&quot;reason&quot;:&quot;No such key&quot;}
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
+  <testcase name="start" classname="JsonDatabaseTest" time="3.161"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Server started!
@@ -99,6 +20,74 @@ Sent: {"type":"get","key":"text"}
 Receieved: {"type":"get","key":"text"}
 Received: {"response":"ERROR","reason":"No such key"}
 Sent: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"set","key":"text","value":"Hello World!"}
+Receieved: {"type":"set","key":"text","value":"Hello World!"}
+Received: {"response":"OK"}
+Sent: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":"text"}
+Receieved: {"type":"get","key":"text"}
+Received: {"response":"OK","value":"Hello World!"}
+Sent: {"response":"OK","value":"Hello World!"}
+Client started!
+Sent: {"type":"delete","key":"text"}
+Receieved: {"type":"delete","key":"text"}
+Received: {"response":"OK"}
+Sent: {"response":"OK"}
+Client started!
+Sent: {"type":"delete","key":"text"}
+Receieved: {"type":"delete","key":"text"}
+Received: {"response":"ERROR","reason":"No such key"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"get","key":"text"}
+Receieved: {"type":"get","key":"text"}
+Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
+Client started!
+Sent: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+Receieved: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+Received: {"response":"OK"}
+Sent: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":["person","name"]}
+Receieved: {"type":"get","key":["person","name"]}
+"Elon Musk"
+"Elon Musk"
+Received: {"response":"OK","value":"Elon Musk"}
+Sent: {"response":"OK","value":"Elon Musk"}
+Client started!
+Sent: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+Receieved: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+{"name":"Falcon 9","launches":"87"}
+Received: {"response":"OK"}
+Sent: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":["person"]}
+Receieved: {"type":"get","key":["person"]}
+{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}
+{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}
+Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Sent: {"type":"delete","key":["person","car","year"]}
+Receieved: {"type":"delete","key":["person","car","year"]}
+{"model":"Tesla Roadster","year":"2018"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
+Client started!
+Sent: {"type":"get","key":["person"]}
+Receieved: {"type":"get","key":["person"]}
+{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}
+{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}
+Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Sent: {"type":"exit"}
+Receieved: {"type":"exit"}
+Sent: {"response":"OK"}
+Received: {"response":"OK"}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
