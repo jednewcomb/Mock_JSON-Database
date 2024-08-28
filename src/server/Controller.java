@@ -1,13 +1,18 @@
 package server;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import server.Commands.Command;
 import server.Commands.DeleteCommand;
 import server.Commands.GetCommand;
 import server.Commands.SetCommand;
+import server.Exceptions.NoSuchRequestException;
 
+/**
+ * Controller class takes in JSON representative "Entry" and
+ * dictates which Command will occur and what Content will be
+ * added/mutated.
+ */
 public class Controller {
     private final Database db;
     private Command command;
@@ -31,6 +36,10 @@ public class Controller {
         return new GsonBuilder().create().toJson(this.response);
     }
 
+    /**
+     * run uses information gathered from our Client sent "Entry"
+     * and issues the Command found in this.entry's "type"
+     */
     void run() {
 
         String operation = this.entry.getType();
@@ -61,6 +70,10 @@ public class Controller {
 
             case "exit":
                 this.response = new Response("OK");
+                return;
+
+            default:
+                throw new NoSuchRequestException();
         }
 
     }

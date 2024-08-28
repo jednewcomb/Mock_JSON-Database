@@ -9,7 +9,15 @@ import java.net.Socket;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
+/**
+ * Client class which sends requests to the Server in the form of an "Entry".
+ * CLI arguments are passed in through "Args" class which are then parsed into
+ * an "Entry" via a file or through CLI arguments.
+ *
+ * JSON format should be sent and returned in the File-Server relationship.
+ */
 public class Client {
+
     public Client(String[] args) {
 
         Args arguments = new Args();
@@ -24,8 +32,8 @@ public class Client {
 
         try (Socket socket = new Socket(InetAddress.getByName(address), port);
              DataInputStream input = new DataInputStream(socket.getInputStream());
-             DataOutputStream output = new DataOutputStream(socket.getOutputStream())
-        ) {
+             DataOutputStream output = new DataOutputStream(socket.getOutputStream()))
+        {
 
             System.out.println("Client started!");
 
@@ -40,12 +48,19 @@ public class Client {
 
     }
 
+    /**
+     * @param arguments - Our "Args" object which dictates what operation and
+     *                    content is added or mutated in our database.
+     *
+     * @return          - A JSON representation of the command and content.
+     */
     public String parse(Args arguments) {
         Gson gson = new Gson();
 
         if (arguments.getFileName() != null) {
             try (Scanner scanner = new Scanner(Paths.get
-                    ("C:\\Users\\Jed\\IdeaProjects\\JSON Database with Java\\JSON Database with Java\\task\\src\\client\\data\\" + arguments.getFileName()))) {
+                    ("C:\\Users\\Jed\\IdeaProjects\\JSON Database with Java\\JSON Database with Java\\task\\src\\client\\data\\"
+                            + arguments.getFileName()))) {
                 return scanner.nextLine();
             } catch (Exception e) {
                 e.printStackTrace();

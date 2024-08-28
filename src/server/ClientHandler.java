@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * A simple ClientHandler class used for Multithreading purposes.
+ */
 public class ClientHandler implements Runnable {
     private final ServerSocket server;
     private final Socket socket;
@@ -23,6 +26,10 @@ public class ClientHandler implements Runnable {
         this.db = db;
     }
 
+    /**
+     * Sends our database and "Entry" to our Controller, which
+     * sends JSON "Response" back to the Server.
+     */
     @Override
     public void run() {
         try {

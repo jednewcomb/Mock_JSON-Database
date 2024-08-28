@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-27T20:29:54" hostname="DESKTOP-MBQCLAC" time="3.161">
+<testsuite name="JsonDatabaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-28T22:12:48" hostname="DESKTOP-MBQCLAC" time="3.33">
   <properties/>
-  <testcase name="start" classname="JsonDatabaseTest" time="3.161"/>
+  <testcase name="start" classname="JsonDatabaseTest" time="3.33"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 Server started!
@@ -38,8 +38,8 @@ Sent: {"response":"OK"}
 Client started!
 Sent: {"type":"delete","key":"text"}
 Receieved: {"type":"delete","key":"text"}
-Received: {"response":"ERROR","reason":"No such key"}
 Sent: {"response":"ERROR","reason":"No such key"}
+Received: {"response":"ERROR","reason":"No such key"}
 Client started!
 Sent: {"type":"get","key":"text"}
 Receieved: {"type":"get","key":"text"}
@@ -61,8 +61,8 @@ Client started!
 Sent: {"type":"set","key":["person","rocket","launches"],"value":"88"}
 Receieved: {"type":"set","key":["person","rocket","launches"],"value":"88"}
 {"name":"Falcon 9","launches":"87"}
-Received: {"response":"OK"}
 Sent: {"response":"OK"}
+Received: {"response":"OK"}
 Client started!
 Sent: {"type":"get","key":["person"]}
 Receieved: {"type":"get","key":["person"]}
@@ -73,6 +73,7 @@ Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadste
 Client started!
 Sent: {"type":"delete","key":["person","car","year"]}
 Receieved: {"type":"delete","key":["person","car","year"]}
+"2018"
 {"model":"Tesla Roadster","year":"2018"}
 Sent: {"response":"OK"}
 Received: {"response":"OK"}
@@ -81,8 +82,8 @@ Sent: {"type":"get","key":["person"]}
 Receieved: {"type":"get","key":["person"]}
 {"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}
 {"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}
-Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
 Sent: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
 Client started!
 Sent: {"type":"exit"}
 Receieved: {"type":"exit"}
